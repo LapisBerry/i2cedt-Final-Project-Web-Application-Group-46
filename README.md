@@ -13,6 +13,7 @@ we will use nvm to download nodejs (nvm: node version manager)
 ```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash```
 
 we will use latest lts version  (Note that “lts/hydrogen” is an alias for Node 18 LTS.)
+
 ```nvm install lts/hydrogen```
 
 ## Use nodejs
