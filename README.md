@@ -1,20 +1,30 @@
 # i2cedt Final Project Group 46
+<p>โปรเจกต์ทำเว็บ เว็บที่เราทำคือเว็บเล่นเกมทายคำศัพท์ง่ายๆ</p>
 <h1>เรารัน npm init แล้ว ทุก package พร้อมแล้ว</h1>
 <p>โปรเจกต์วิชา Introduction to CEDT</p>
 <p>ทำ Web Application, Store และ Deploy ที่ AWS EC2</p>
 
+## Project Name: Guess The Words
+<p>จะมีคำศัพท์ภาษาอังกฤษขึ้นมา และเราต้องทายคำแปลของคำศัพท์</p>
+
 ## How to use
 in ubuntu
 
-```sudo apt update -y && sudo apt upgrade -y```
+```
+sudo apt update -y && sudo apt upgrade -y
+```
 
 we will use nvm to download nodejs (nvm: node version manager)
 
-```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash```
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+```
 
 we will use latest lts version  (Note that “lts/hydrogen” is an alias for Node 18 LTS.)
 
-```nvm install lts/hydrogen```
+```
+nvm install lts/hydrogen
+```
 
 go into folder backend and install node modules
 
@@ -54,9 +64,6 @@ npm start
 
 ### in frontend
 - express
-
-## Project Name: Guess The Words
-<p>จะมีคำศัพท์ภาษาอังกฤษขึ้นมา และเราต้องทายคำแปลของคำศัพท์</p>
 
 ## Members
 - 6633026621 นายกิตติภพ ขันแก้ว Back-End-Man
