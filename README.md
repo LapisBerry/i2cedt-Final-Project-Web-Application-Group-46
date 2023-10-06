@@ -30,6 +30,14 @@ cd frontend
 npm install
 ```
 
+last step: set up mongodb and change the MONGO_URL variable
+
+run this command in backend and frontend folder
+
+```
+npm start
+```
+
 ## Package Used
 
 ## We use nodejs
