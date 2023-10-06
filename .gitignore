@@ -2,5 +2,3 @@
 __MACOSX
 node_modules
 .vscode
-
-.env
