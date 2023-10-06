@@ -16,21 +16,35 @@ we will use latest lts version  (Note that “lts/hydrogen” is an alias for No
 
 ```nvm install lts/hydrogen```
 
-## Use nodejs
-- express
-- cors
-- mongoose
-- dotenv
+go into folder backend and install node modules
+
+```
+cd backend
+npm install
+```
+
+do the same but in folder front end
+
+```
+cd frontend
+npm install
+```
 
 ## Package Used
 
-### backend
+## We use nodejs
 - express
 - cors
 - mongoose
 - dotenv
 
-### frontend
+### in backend
+- express
+- cors
+- mongoose
+- dotenv
+
+### in frontend
 - express
 
 ## Project Name: Guess The Words
