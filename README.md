@@ -1,5 +1,5 @@
 # i2cedt Final Project Group 46
-<h1>!!!ยังไม่ได้รัน npm init นะ!!!</h1>
+<h1>เรารัน npm init แล้ว ทุก package พร้อมแล้ว</h1>
 <p>โปรเจกต์วิชา Introduction to CEDT</p>
 <p>ทำ Web Application, Store และ Deploy ที่ AWS EC2</p>
 
