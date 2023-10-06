@@ -20,6 +20,7 @@ we will use latest lts version  (Note that “lts/hydrogen” is an alias for No
 - express
 - cors
 - mongoose
+- dotenv
 
 ## Package Used
 
@@ -27,6 +28,7 @@ we will use latest lts version  (Note that “lts/hydrogen” is an alias for No
 - express
 - cors
 - mongoose
+- dotenv
 
 ### frontend
 - express
