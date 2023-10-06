@@ -1,12 +1,15 @@
 # FrontEnd Section
 
-ถ้ารู้สึกว่ามันยากไป ให้บอกกลุ่มนะ เราอาจเปลี่ยนหัวข้อ
-
-from backend man:
-เรายังไม่รู้ว่าจะทำ Data Base อย่างไร Schema แบบไหน แต่สิ่งที่ต้องมีแน่ๆ คือ คำศัพท์และคำแปล
-
-นี้ก็แค่ไกด์ อยากจะทำแบบไหนก็ได้ตามใจเลย
-เดี๋ยวเราจะมาบอก ว่า Data Base ต้องทำอย่างไร
-
-แก้ได้ทุกไฟล์ เพราะว่ามันว่างเปล่า
-ปล.ไม่ต้องทำตาม figma ลองออกแบบเองก็ได้
+Schema ที่เราจะเก็บใน mongodb
+```
+const vocabularySchema = new mongoose.Schema({
+  vocabulary: {
+    type: String,
+    required: true,
+  },
+  meaning: {
+    type: String,
+    required: true,
+  },
+});
+```
