@@ -3,6 +3,34 @@
 <p>โปรเจกต์วิชา Introduction to CEDT</p>
 <p>ทำ Web Application, Store และ Deploy ที่ AWS EC2</p>
 
+## How to use
+in ubuntu
+
+```sudo apt update -y && sudo apt upgrade -y```
+
+we will use nvm to download nodejs (nvm: node version manager)
+
+```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash```
+
+we will use latest lts version  (Note that “lts/hydrogen” is an alias for Node 18 LTS.)
+
+```nvm install lts/hydrogen```
+
+## Use nodejs
+- express
+- cors
+- mongoose
+
+## Package Used
+
+### backend
+- express
+- cors
+- mongoose
+
+### frontend
+- express
+
 ## Project Name: Guess The Words
 <p>จะมีคำศัพท์ภาษาอังกฤษขึ้นมา และเราต้องทายคำแปลของคำศัพท์</p>
 
