@@ -1,8 +1,8 @@
 {
   "name": "frontend-i2cedt-final-project-group46",
   "version": "0.0.0",
-  "description": "frontend Web Application Guess The Words",
-  "main": "src/server.js",
+  "description": "Frontend Web Application Guess The Words",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
