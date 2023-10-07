@@ -1,7 +1,7 @@
 import { fetchAndDrawTable, handleCreateItem } from "./table.js";
 
 // Get references to the button and the element to toggle
-const toggleButton = document.getElementById("toggleButton");
+const toggleButton = document.querySelector(".toggleButton");
 const elementToToggle = document.getElementById("elementToToggle");
 
 // Add a click event listener to the button

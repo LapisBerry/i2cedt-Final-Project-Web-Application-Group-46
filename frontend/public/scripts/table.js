@@ -14,7 +14,7 @@ export async function fetchAndDrawTable() {
 
 function drawTable(items) {
   /** @type {HTMLTableSectionElement} */
-  const tableBody = document.getElementById("main-t-body");
+  const tableBody = document.querySelector("tbody");
 
   // Clear all elements
   tableBody.innerHTML = "";
