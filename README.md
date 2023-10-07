@@ -40,7 +40,9 @@ cd frontend
 npm install
 ```
 
-last step: set up mongodb and change the MONGO_URL variable
+next: set up mongodb and change the variable MONGO_URL in /backend/.env
+
+next: set up EC2 instance and change the variable BACKEND_URL in /frontend/scripts/config.js
 
 run this command in backend and frontend folder
 
