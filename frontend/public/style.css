@@ -1,3 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;400;600&display=swap');
+body{
+    font-family: 'Mitr', sans-serif;
+}
+#app-name{
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+section{
+    margin: 20px 0;
+}
+.section-title{
+    font-size: 0.85em;
+    font-weight: lighter;
+    margin: 0;
+}
+.section-subtitle{
+    font-size: 0.8em;
+    font-weight: lighter;
+    line-height: 80%;
+}
+#member-list{
+    margin:0;
+    font-size: 0.8em;
+}
+
+#main-table{
+    position: absolute;
+    top: 100px;
+    left: 1168px;
+    padding: 0;
+    width: 23%;
+    background: #EEE;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.1);
+    border-collapse: collapse;
+    overflow: hidden;
+}
+#main-table > thead{
+position: relative;
+    background: #555;
+    color:white;
+}
+#main-table > thead > tr > th{
+position: relative;
+    font-weight: lighter;
+    text-align: left;
+}
+#main-table td,#main-table th{
+position: relative;
+    padding: 5px 10px;
+    font-weight: lighter;
+}
+#vocab-to-add, #meaning-to-add{
+    padding:5px 10px;
+    width: 100px;
+    border-radius: 8px;
+    border:1px solid #AAA;
+}
+.delete-row, #add-newrow{
+    border-radius: 8px;
+    padding: 5px 10px;
+    border: 1px solid #AAA;
+    background: white;
+    width: 30px;
+    cursor: pointer;
+}
+.delete-row:hover, #add-newrow:hover{
+    background: rgb(255, 200, 105);
+    color:white;
+}
 .starting-page {
   background-color: rgba(255, 255, 255, 1);
   display: flex;
@@ -411,8 +484,8 @@
 
 .starting-page .text-wrapper-3 {
   position: absolute;
-  top: 13px;
-  left: 50px;
+  top: 10px;
+  left: 47px;
   -webkit-text-stroke: 1px #000000;
   font-family: "Inter", Helvetica;
   font-weight: 800;
@@ -422,3 +495,17 @@
   letter-spacing: 0;
   line-height: normal;
 }
+.starting-page .toggleButton {
+position: absolute;
+	    background: linear-gradient(180deg, rgb(92.55, 5.10, 63.14) 0%, rgb(0.00, 0.00, 0.00) 100%);
+            
+            color: #fff; /* Text color */
+            padding: 12px 65px; /* Padding around the text */
+            border: none; /* Remove the default border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Change cursor on hover */
+            font-size: 25px; /* Font size */
+        }
+.starting-page .toggleButton:hover {
+            background-color: #0056b3; /* Change background color on hover */
+        }
