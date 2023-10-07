@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
+<div class="main-container">
     <div class="starting-page">
       <div class="overlap-wrapper">
         <div class="overlap">
@@ -41,7 +43,7 @@
             <div class="frame"><img class="arrow-right-s-line" src="img/arrow-right-s-line-2.svg" /></div>
           </div>
           <img class="title-starting-page" src="img/title-starting-page.png" />
-          <div class="middle-text-while">12 secs left</div>
+          <div class="middle-text-while">59 secs left</div>
           <div class="choice-text-wrapper"><div class="choice-text-3">วางแผนล่วงหน้า</div></div>
           <div class="div-wrapper"><div class="choice-text-4">อัจฉริยะ</div></div>
           <div class="stop-frame">
@@ -49,8 +51,31 @@
             <div class="frame"><img class="arrow-right-s-line" src="img/arrow-right-s-line-1.svg" /></div>
           </div>
           <div class="overlap-2"><div class="text-wrapper-3">Enter your vocab here</div></div>
+	  <div class="overlap-2"><button id="toggleButton">Enter your vocab here</button></div>
+
+
+    <div id="elementToToggle" style="display: none;">
+        <table id = "main-table" >
+    <thead>
+        <tr>
+            <th class ="section-title">vocab</th>
+           
+            <th class ="section-title">meaning</th>
+            <th class ="section-title"> </th>
+        </tr>
+    </thead>
+<tbody id="main-t-body">
+    <tr>
+      <td><input id="vocab-to-add" type="text"></td>
+      <td><input id="meaning-to-add" type="text"></td>
+      <td><button id="add-newrow">+</button></td>
+    </tr>
+  </tbody>
+  </table>
+    </div>
         </div>
       </div>
     </div>
-  </body>
+<script type="module" src="src/main.js"></script>
+</body>
 </html>
