@@ -17,10 +17,10 @@ export const createVocabulary = async (req, res) => {
 };
 
 /** @type {import("express").RequestHandler} */
-export const getVocabularys = async (req, res) => {
-  const vocabularys = await Vocabulary.find();
+export const getVocabularies = async (req, res) => {
+  const vocabularies = await Vocabulary.find();
 
-  res.status(200).json(vocabularys);
+  res.status(200).json(vocabularies);
 };
 
 /** @type {import("express").RequestHandler} */

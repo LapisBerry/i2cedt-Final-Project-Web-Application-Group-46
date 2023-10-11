@@ -1,34 +1,33 @@
-import { createVocabulary, deleteVocabulary, getVocabularys } from "./api.js";
+import { createVocabulary, deleteVocabulary, getVocabularies } from "./api.js";
 
 /** @typedef {import("./config.js").Vocabulary} Vocabulary */
 /** @typedef {import("./config.js").VocabularyPayload} VocabularyPayload */
 
 /**
- * @param {Vocabulary[]} vocabularys
+ * @param {Vocabulary[]} vocabularies
  */
 
 export async function fetchAndDrawTable() {
-  const vocabularys = await getVocabularys();
-  drawTable(vocabularys);
+  const vocabularies = await getVocabularies();
+  drawTable(vocabularies);
 }
 
-function drawTable(vocabularys) {
+function drawTable(vocabularies) {
   /** @type {HTMLTableSectionElement} */
   const tableBody = document.querySelector("tbody");
 
   // Clear all elements
   tableBody.innerHTML = "";
   {
-    const row = tableBody.insertRow();
-  const deletebutton = document.createElement("button");
+  const row = tableBody.insertRow();
 
   const vocabtoadd = document.createElement("input");
   vocabtoadd.id = "vocab-to-add";
 
   const meaningtoadd = document.createElement("input");
   meaningtoadd.id = "meaning-to-add";
-  const addbutton = document.createElement("button");
 
+  const addbutton = document.createElement("button");
   addbutton.addEventListener("click", () => handleCreateVocabulary());
   addbutton.innerText = "+";
 
@@ -38,7 +37,7 @@ function drawTable(vocabularys) {
   }
   
 
-  for (const vocabulary of vocabularys) {
+  for (const vocabulary of vocabularies) {
     const row = tableBody.insertRow();
     const deletebutton = document.createElement("button");
     row.insertCell().innerText = vocabulary.vocabulary;

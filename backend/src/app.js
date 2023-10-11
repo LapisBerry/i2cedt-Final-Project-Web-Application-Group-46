@@ -13,6 +13,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 // use routes
-app.use("/vocabularys", VocabularyRoute);
+app.use("/vocabularies", VocabularyRoute);
 
 export default app;
