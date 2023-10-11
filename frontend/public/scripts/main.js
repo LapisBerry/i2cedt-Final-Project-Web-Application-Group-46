@@ -1,4 +1,4 @@
-import { fetchAndDrawTable, handleCreateItem } from "./table.js";
+import { fetchAndDrawTable, handleCreateVocabulary } from "./table.js";
 
 // Get references to the button and the element to toggle
 const toggleButton = document.querySelector(".toggleButton");
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const vocabValue = vocabInput.value;
     const meaningValue = meaningInput.value;
     if (vocabValue && meaningValue) {
-      handleCreateItem();
+      handleCreateVocabulary();
     }
   });
 });

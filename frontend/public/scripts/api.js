@@ -1,44 +1,44 @@
 import { BACKEND_URL } from "./config.js";
 
-/** @typedef {import("./config.js").Item} Item */
-/** @typedef {import("./config.js").ItemPayload} ItemPayload */
+/** @typedef {import("./config.js").Vocabulary} Vocabulary */
+/** @typedef {import("./config.js").VocabularyPayload} VocabularyPayload */
 
-export async function getItems() {
-  /** @type {Item[]} */
-  const items = await fetch(`${BACKEND_URL}/items`).then((r) => r.json());
+export async function getVocabularys() {
+  /** @type {Vocabulary[]} */
+  const vocabularys = await fetch(`${BACKEND_URL}/vocabularys`).then((r) => r.json());
 
-  return items;
+  return vocabularys;
 }
 
 /**
- * @param {ItemPayload} item
+ * @param {VocabularyPayload} vocabulary
  */
-export async function createItem(item) {
-  await fetch(`${BACKEND_URL}/items`, {
+export async function createVocabulary(vocabulary) {
+  await fetch(`${BACKEND_URL}/vocabularys`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(item),
+    body: JSON.stringify(vocabulary),
   });
 }
 
 /**
  * @param {string} id
- * @param {ItemPayload} item
+ * @param {VocabularyPayload} vocabulary
  */
-export async function editItem(id, item) {
-  await fetch(`${BACKEND_URL}/items/${id}`, {
+export async function editVocabulary(id, vocabulary) {
+  await fetch(`${BACKEND_URL}/vocabularys/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(item),
+    body: JSON.stringify(vocabulary),
   });
 }
 
-export async function deleteItem(id, item) {
-  await fetch(`${BACKEND_URL}/items/${id}`, {
+export async function deleteVocabulary(id, vocabulary) {
+  await fetch(`${BACKEND_URL}/vocabularys/${id}`, {
     method: "DELETE",
   });
 }

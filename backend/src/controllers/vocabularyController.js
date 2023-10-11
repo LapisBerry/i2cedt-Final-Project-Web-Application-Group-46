@@ -1,10 +1,10 @@
-import Item from "../models/itemModels.js";
+import Vocabulary from "../models/vocabularyModels.js";
 
 /** @type {import("express").RequestHandler} */
-export const createItem = async (req, res) => {
+export const createVocabulary = async (req, res) => {
   try {
-    const newItem = new Item(req.body);
-    await newItem.save();
+    const newVocabulary = new Vocabulary(req.body);
+    await newVocabulary.save();
 
     res.status(200).json({ message: "OK" });
   } catch (err) {
@@ -17,16 +17,16 @@ export const createItem = async (req, res) => {
 };
 
 /** @type {import("express").RequestHandler} */
-export const getItems = async (req, res) => {
-  const items = await Item.find();
+export const getVocabularys = async (req, res) => {
+  const vocabularys = await Vocabulary.find();
 
-  res.status(200).json(items);
+  res.status(200).json(vocabularys);
 };
 
 /** @type {import("express").RequestHandler} */
-export const editItem = async (req, res) => {
+export const editVocabulary = async (req, res) => {
   try {
-    const updated = await Item.findByIdAndUpdate(req.params.id, req.body);
+    const updated = await Vocabulary.findByIdAndUpdate(req.params.id, req.body);
 
     if (updated) {
       res.status(200).json({ message: "OK" });
@@ -43,9 +43,9 @@ export const editItem = async (req, res) => {
 };
 
 /** @type {import("express").RequestHandler} */
-export const deleteItem = async (req, res) => {
+export const deleteVocabulary = async (req, res) => {
   try {
-    const updated = await Item.findByIdAndDelete(req.params.id, req.body);
+    const updated = await Vocabulary.findByIdAndDelete(req.params.id, req.body);
 
     if (updated) {
       res.status(200).json({ message: "OK" });

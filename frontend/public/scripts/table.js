@@ -1,18 +1,18 @@
-import { createItem, deleteItem, getItems } from "./api.js";
+import { createVocabulary, deleteVocabulary, getVocabularys } from "./api.js";
 
-/** @typedef {import("./config.js").Item} Item */
-/** @typedef {import("./config.js").ItemPayload} ItemPayload */
+/** @typedef {import("./config.js").Vocabulary} Vocabulary */
+/** @typedef {import("./config.js").VocabularyPayload} VocabularyPayload */
 
 /**
- * @param {Item[]} items
+ * @param {Vocabulary[]} vocabularys
  */
 
 export async function fetchAndDrawTable() {
-  const items = await getItems();
-  drawTable(items);
+  const vocabularys = await getVocabularys();
+  drawTable(vocabularys);
 }
 
-function drawTable(items) {
+function drawTable(vocabularys) {
   /** @type {HTMLTableSectionElement} */
   const tableBody = document.querySelector("tbody");
 
@@ -29,7 +29,7 @@ function drawTable(items) {
   meaningtoadd.id = "meaning-to-add";
   const addbutton = document.createElement("button");
 
-  addbutton.addEventListener("click", () => handleCreateItem());
+  addbutton.addEventListener("click", () => handleCreateVocabulary());
   addbutton.innerText = "+";
 
   row.insertCell().appendChild(vocabtoadd);
@@ -38,13 +38,13 @@ function drawTable(items) {
   }
   
 
-  for (const item of items) {
+  for (const vocabulary of vocabularys) {
     const row = tableBody.insertRow();
     const deletebutton = document.createElement("button");
-    row.insertCell().innerText = item.vocabulary;
-    row.insertCell().innerText = item.meaning;
+    row.insertCell().innerText = vocabulary.vocabulary;
+    row.insertCell().innerText = vocabulary.meaning;
 
-    deletebutton.addEventListener("click", () => handleDelete(item._id));
+    deletebutton.addEventListener("click", () => handleDelete(vocabulary._id));
     deletebutton.innerText = "-";
 
     row.insertCell().appendChild(deletebutton);
@@ -55,11 +55,11 @@ function drawTable(items) {
  * @param {string} id
  */
 export async function handleDelete(id) {
-  await deleteItem(id);
+  await deleteVocabulary(id);
   await fetchAndDrawTable();
 }
 
-export async function handleCreateItem() {
+export async function handleCreateVocabulary() {
   const vocabInput = document.getElementById("vocab-to-add");
   const meaningInput = document.getElementById("meaning-to-add");
 
@@ -68,7 +68,7 @@ export async function handleCreateItem() {
     meaning: meaningInput.value,
   };
 
-  await createItem(payload);
+  await createVocabulary(payload);
   await fetchAndDrawTable();
 
   vocabInput.value = "";

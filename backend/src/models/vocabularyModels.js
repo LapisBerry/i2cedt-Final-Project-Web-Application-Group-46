@@ -11,6 +11,6 @@ const vocabularySchema = new mongoose.Schema({
   },
 });
 
-const Item = mongoose.model("Item", vocabularySchema);
+const Vocabulary = mongoose.model("Vocabulary", vocabularySchema);
 
-export default Item;
+export default Vocabulary;
