@@ -1,0 +1,32 @@
+{
+  "name": "backend-i2cedt-final-project-group46",
+  "version": "0.0.0",
+  "description": "Web Application Guess The Words",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LapisBerry/i2cedt-Final-Project-Web-Application-Group-46.git"
+  },
+  "keywords": [
+    "web-application",
+    "educational-project",
+    "guess-the-word"
+  ],
+  "author": "LapisBerry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LapisBerry/i2cedt-Final-Project-Web-Application-Group-46/issues"
+  },
+  "homepage": "https://github.com/LapisBerry/i2cedt-Final-Project-Web-Application-Group-46#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.6.1"
+  }
+}
