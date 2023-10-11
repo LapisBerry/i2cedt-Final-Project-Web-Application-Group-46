@@ -14,28 +14,10 @@ export async function fetchAndDrawTable() {
 
 function drawTable(vocabularies) {
   /** @type {HTMLTableSectionElement} */
-  const tableBody = document.querySelector("tbody");
+  const tableBody = document.getElementById("main-table-body");
 
   // Clear all elements
   tableBody.innerHTML = "";
-  {
-  const row = tableBody.insertRow();
-
-  const vocabtoadd = document.createElement("input");
-  vocabtoadd.id = "vocab-to-add";
-
-  const meaningtoadd = document.createElement("input");
-  meaningtoadd.id = "meaning-to-add";
-
-  const addbutton = document.createElement("button");
-  addbutton.addEventListener("click", () => handleCreateVocabulary());
-  addbutton.innerText = "+";
-
-  row.insertCell().appendChild(vocabtoadd);
-  row.insertCell().appendChild(meaningtoadd);
-  row.insertCell().appendChild(addbutton);
-  }
-  
 
   for (const vocabulary of vocabularies) {
     const row = tableBody.insertRow();
