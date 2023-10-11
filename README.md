@@ -54,13 +54,11 @@ we define this start script in package.json
 
 `npm start` is the same meaning as `node server.js`
 
+**IT SHOULD WORK**
+
 ## Package Used
 
-## We use nodejs
-- express
-- cors
-- mongoose
-- dotenv
+we use nodejs
 
 ### in backend
 - express
