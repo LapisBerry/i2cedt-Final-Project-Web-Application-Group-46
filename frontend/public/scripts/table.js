@@ -18,17 +18,36 @@ function drawTable(items) {
 
   // Clear all elements
   tableBody.innerHTML = "";
+  {
+    const row = tableBody.insertRow();
+  const deletebutton = document.createElement("button");
+
+  const vocabtoadd = document.createElement("input");
+  vocabtoadd.id = "vocab-to-add";
+
+  const meaningtoadd = document.createElement("input");
+  meaningtoadd.id = "meaning-to-add";
+  const addbutton = document.createElement("button");
+
+  addbutton.addEventListener("click", () => handleCreateItem());
+  addbutton.innerText = "+";
+
+  row.insertCell().appendChild(vocabtoadd);
+  row.insertCell().appendChild(meaningtoadd);
+  row.insertCell().appendChild(addbutton);
+  }
+  
 
   for (const item of items) {
     const row = tableBody.insertRow();
+    const deletebutton = document.createElement("button");
     row.insertCell().innerText = item.vocabulary;
     row.insertCell().innerText = item.meaning;
 
-    const button = document.createElement("button");
-    button.addEventListener("click", () => handleDelete(item._id));
-    button.innerText = "-";
+    deletebutton.addEventListener("click", () => handleDelete(item._id));
+    deletebutton.innerText = "-";
 
-    row.insertCell().appendChild(button);
+    row.insertCell().appendChild(deletebutton);
   }
 }
 
