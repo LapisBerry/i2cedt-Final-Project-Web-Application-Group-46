@@ -50,6 +50,10 @@ run this command in backend and frontend folder
 npm start
 ```
 
+we define this start script in package.json
+
+`npm start` is the same meaning as `node server.js`
+
 ## Package Used
 
 ## We use nodejs
