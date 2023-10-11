@@ -1,6 +1,6 @@
 # i2cedt Final Project Group 46
 <p>โปรเจกต์ทำเว็บ เว็บที่เราทำคือเว็บเล่นเกมทายคำศัพท์ง่ายๆ</p>
-<h1>เรายังไม่ได้รัน npm init</h1>
+<h1>เรารัน npm init เรียบร้อย</h1>
 <p>โปรเจกต์วิชา Introduction to CEDT</p>
 <p>ทำ Web Application, Store และ Deploy ที่ AWS EC2</p>
 
@@ -49,6 +49,10 @@ run this command in backend and frontend folder
 ```
 npm start
 ```
+
+we define this start script in package.json
+
+`npm start` is the same meaning as `node server.js`
 
 ## Package Used
 
