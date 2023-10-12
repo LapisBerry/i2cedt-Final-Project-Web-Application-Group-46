@@ -10,6 +10,7 @@ export async function getVocabularies() {
   return vocabularies;
 }
 
+
 /**
  * @param {VocabularyPayload} vocabulary
  */
@@ -42,3 +43,4 @@ export async function deleteVocabulary(id, vocabulary) {
     method: "DELETE",
   });
 }
+

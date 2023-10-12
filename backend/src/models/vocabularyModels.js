@@ -11,6 +11,6 @@ const vocabularySchema = new mongoose.Schema({
   },
 });
 
-const Vocabulary = mongoose.model("Vocabulary", vocabularySchema);
+var Vocabulary = mongoose.model("Vocabulary", vocabularySchema);
 
 export default Vocabulary;

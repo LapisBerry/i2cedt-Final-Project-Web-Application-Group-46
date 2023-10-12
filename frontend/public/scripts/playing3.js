@@ -1,44 +1,6 @@
-// ไฟล์นี้ตั้งใจปล่อยว่างไว้
-// ทำระบบตอบคำถามในนี้???
-import {getVocabularies,} from "./api.js";
-const dictionary = await getVocabularies()
-function randomizer1(){ 
-    var selection = dictionary[Math.floor(Math.random()*dictionary.length)]; 
-    for (var key in selection){
-         document.getElementById("meaning4").innerText = selection[key];
-         document.getElementById(key).innerText = selection[key];
-        
-    } 
-    return; 
-}
-
-function randomizer2(){ 
-    var selection = dictionary[Math.floor(Math.random()*dictionary.length)]; 
-    for (var key in selection){ 
-        document.getElementById("meaning3").innerText = selection[key];
-        document.getElementById(key).innerText = selection[key]; 
-    } 
-    return; 
-}
-
-function randomizer3(){ 
-    var selection = dictionary[Math.floor(Math.random()*dictionary.length)]; 
-    for (var key in selection){ 
-        document.getElementById("meaning2").innerText = selection[key];
-        document.getElementById(key).innerText = selection[key];
-    } 
-    return; 
-}
-
-function randomizer4(){ 
-    var selection = dictionary[Math.floor(Math.random()*dictionary.length)]; 
-    for (var key in selection){
-        document.getElementById("meaning1").innerText = selection[key];
-        document.getElementById(key).innerText = selection[key];
-    } 
-    return; 
-}
+import {randomizer1, randomizer2, randomizer3, randomizer4} from "./playing2.js";
 // button
+
 const choiceText = document.querySelector(".choice-text"); 
 const choiceText2 = document.querySelector(".choice-text-2");  
 const choiceText3 = document.querySelector(".choice-text-3");  
@@ -79,7 +41,7 @@ randoming()
 console.log(randomer)
 // Add a click event listener to the button
 choiceText.addEventListener('click', function () {
-    if (randomer == 1) {
+    if (randomer == 3) {
         count++
     } else {count = 0}
     counter.textContent = count;
@@ -97,7 +59,7 @@ choiceText.addEventListener('click', function () {
   });
 
   choiceText3.addEventListener("click", function () {
-    if (randomer == 0) {
+    if (randomer == 1) {
         count++
     } else {count = 0}
     counter.textContent = count;
@@ -106,7 +68,7 @@ choiceText.addEventListener('click', function () {
   });
 
   choiceText4.addEventListener("click", function () {
-   if (randomer == 3) {
+   if (randomer == 0) {
     count++
 } else count = 0
     counter.textContent = count;
