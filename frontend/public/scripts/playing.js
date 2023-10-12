@@ -1,9 +1,11 @@
-// ไฟล์นี้ตั้งใจปล่อยว่างไว้
 // ทำระบบตอบคำถามในนี้???
+
 import {getVocabularies,} from "./api.js";
 const dictionary = await getVocabularies()
+console.log(dictionary)
 function randomizer1(){ 
-    var selection = dictionary[Math.floor(Math.random()*dictionary.length)]; 
+    var selection = dictionary[Math.floor(Math.random()*dictionary.length)];
+    delete selection.__v; 
     for (var key in selection){
          document.getElementById("meaning4").innerText = selection[key];
          document.getElementById(key).innerText = selection[key];
@@ -14,6 +16,7 @@ function randomizer1(){
 
 function randomizer2(){ 
     var selection = dictionary[Math.floor(Math.random()*dictionary.length)]; 
+    delete selection.__v;
     for (var key in selection){ 
         document.getElementById("meaning3").innerText = selection[key];
         document.getElementById(key).innerText = selection[key]; 
@@ -23,6 +26,7 @@ function randomizer2(){
 
 function randomizer3(){ 
     var selection = dictionary[Math.floor(Math.random()*dictionary.length)]; 
+    delete selection.__v;
     for (var key in selection){ 
         document.getElementById("meaning2").innerText = selection[key];
         document.getElementById(key).innerText = selection[key];
@@ -32,6 +36,7 @@ function randomizer3(){
 
 function randomizer4(){ 
     var selection = dictionary[Math.floor(Math.random()*dictionary.length)]; 
+    delete selection.__v;
     for (var key in selection){
         document.getElementById("meaning1").innerText = selection[key];
         document.getElementById(key).innerText = selection[key];
