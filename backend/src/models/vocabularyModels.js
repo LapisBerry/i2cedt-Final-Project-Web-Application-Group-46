@@ -11,6 +11,9 @@ const vocabularySchema = new mongoose.Schema({
   },
 });
 
+// To exclude the __v field from query results, use the select option:
+vocabularySchema.set('toJSON', { versionKey: false });
+
 var Vocabulary = mongoose.model("Vocabulary", vocabularySchema);
 
 export default Vocabulary;
