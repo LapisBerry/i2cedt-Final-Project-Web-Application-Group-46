@@ -1,5 +1,5 @@
 /**
- * @typedef {Object} vocabX
+ * @typedef {Object} Vocabulary
  * @property {string} _id
  * @property {string} vocabulary
  * @property {string} meaning
