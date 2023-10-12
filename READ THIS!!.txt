@@ -1,0 +1,3 @@
+Pls add a lot of data for it to work!!
+
+We have English.csv data for vocab
